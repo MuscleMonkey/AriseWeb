@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arise - Gaming News</title>
+    <style>
+      hr {
+        width: 80%;
+        margin-left: 0;
+      }
+      header {
+        font-size: 30px;
+        font-weight: 600;
+        margin-bottom: 40px;
+      }
+      /* border added as guide */
+      .container {
+        border-style: solid;
+        border-width: 2px;
+        border-color: black;
+        padding: 10px;
+        width: auto;
+        height: auto;
+      }
+      img {
+        border-radius: 5%;
+        background-color: grey;
+        min-width: 200px;
+        height: 150px;
+        object-fit: cover;
+      }
+      .item {
+        gap: 20px;
+        display: flex;
+        flex-direction: column wrap;
+        width: 75%;
+      }
+
+      @media (max-width: 800px) {
+        .item {
+          flex-direction: column;
+        }
+        img {
+          width: 250px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="container">
+      <header class="header">
+        Latest News
+        <hr />
+      </header>
+      <section class="main" id="main"></section>
+    </section>
+    <script>
+      for (let i = 0; i < 5; i++) {
+        let para = document.createElement("p");
+        para.setAttribute("id", "item-para");
+        para.textContent =
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Tincidunt tortor aliquam nulla facilisi cras fermentum odio eu.Non diam phasellus vestibulum lorem sed. Volutpat diam utvenenatis tellus in metus.";
+
+        let h3 = document.createElement("h3");
+        h3.setAttribute("id", "item-title");
+        h3.textContent = "Title";
+
+        let title_paragraph = document.createElement("section");
+        title_paragraph.setAttribute("id", "title-paragraph");
+        title_paragraph.appendChild(h3);
+        title_paragraph.appendChild(para);
+
+        let img = document.createElement("img");
+        img.setAttribute("src", "OIP.jpg");
+
+        let item = document.createElement("article");
+        item.setAttribute("class", "item");
+        item.setAttribute("id", "item");
+        item.appendChild(img);
+        item.appendChild(title_paragraph);
+
+        let hr = document.createElement("hr");
+        let main = document.getElementById("main");
+        main.appendChild(item);
+        main.appendChild(hr);
+      }
+    </script>
+  </body>
+</html>
