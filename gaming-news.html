@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arise - Gaming News</title>
+    <style>
+      hr {
+        width: 80%;
+        margin-left: 0;
+      }
+      header {
+        font-size: 30px;
+        font-weight: 600;
+        margin-bottom: 40px;
+      }
+      /* border added as guide */
+      .container {
+        border-style: solid;
+        border-width: 2px;
+        border-color: black;
+        padding: 10px;
+        width: auto;
+        height: auto;
+      }
+      .article-img {
+        border-radius: 5%;
+        background-color: grey;
+        min-width: 200px;
+        height: 150px;
+        object-fit: cover;
+      }
+      .item {
+        gap: 20px;
+        display: flex;
+        flex-direction: column wrap;
+        width: 75%;
+      }
+
+      @media (max-width: 800px) {
+        .item {
+          flex-direction: column;
+        }
+        img {
+          width: 250px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="container">
+      <header class="header">
+        Latest News
+        <hr />
+      </header>
+      <section class="main" id="main"></section>
+    </section>
+    <script src="script.js">
+      
+    </script>
+  </body>
+</html>
