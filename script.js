@@ -1,6 +1,6 @@
 for (let i = 0; i < 5; i++) {
     let para = document.createElement("p");
-    para.setAttribute("id", "item-para");
+    para.setAttribute("id", "short-description");
     para.textContent =
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Tincidunt tortor aliquam nulla facilisi cras fermentum odio eu.Non diam phasellus vestibulum lorem sed. Volutpat diam utvenenatis tellus in metus.";
 
